@@ -1,0 +1,8 @@
+$ rake
+/usr/bin/ruby1.8 test/ts_cc.rb
+Loaded suite test/ts_cc
+Started
+...
+Finished in 0.002232 seconds.
+
+3 tests, 39 assertions, 0 failures, 0 errors
