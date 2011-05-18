@@ -1,8 +1,3 @@
-# mrepper@sandia.gov
-
-# so latex can find the Sandia beamer theme (assumes redsky-tools layout)
-#export TEXINPUTS = .:../beamerthemes:
-
 ifdef DEBUG
    ECHO = echo
 endif

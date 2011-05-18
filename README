@@ -1,0 +1,18 @@
+This repository contains a presentation on Creative Commons I did for my grad
+school research group.  It contains an overview of how Creative Commons works
+and an example of programatic control of CC-licensed entities.  The programatic
+control is implemented in Ruby and contains a test suite that can be used to
+show that it's implemented correctly.
+
+- The presentation is in Beamer/LaTeX.  To build, given a machine setup to
+  typeset this sort of thing, just type "make" in the current directory.
+
+- Code is in the code/ directory
+    - cc_licensed.rb is a ruby module that can be mixed-in to other classes to
+      gain behavior of a CC-licensed entity
+    - book.rb is a simple class representing a book that gets the module
+      defined in cc_licensed.rb mixed into it.
+    - tests are in code/test/ts_cc.rb.  You can run them by typing "rake" in
+      the code/ directory.
+
+Creative Commons: http://creativecommons.org/
