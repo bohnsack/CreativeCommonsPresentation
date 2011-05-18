@@ -76,17 +76,11 @@ class MyFirstTest < Test::Unit::TestCase
         assert  @b_by_sa.share?(:attr => true,  :comm => true,  :deriv => true,  :sa => true)
         assert !@b_by_sa.share?(:attr => true,  :comm => true,  :deriv => true,  :sa => false)
         assert  @b_by_sa.share?(:attr => true,  :comm => true,  :deriv => false, :sa => true)
-
-        # TODO this commented out one fails
-        #assert !@b_by_sa.share?(:attr => true,  :comm => true,  :deriv => false, :sa => false)
-
+        assert !@b_by_sa.share?(:attr => true,  :comm => true,  :deriv => false, :sa => false)
         assert  @b_by_sa.share?(:attr => true,  :comm => false, :deriv => true,  :sa => true)
         assert !@b_by_sa.share?(:attr => true,  :comm => false, :deriv => true,  :sa => false)
         assert  @b_by_sa.share?(:attr => true,  :comm => false, :deriv => false, :sa => true)
-
-        # TODO this commented out one fails
-        #assert !@b_by_sa.share?(:attr => true,  :comm => false, :deriv => false, :sa => false)
-
+        assert !@b_by_sa.share?(:attr => true,  :comm => false, :deriv => false, :sa => false)
         assert !@b_by_sa.share?(:attr => false, :comm => true,  :deriv => true,  :sa => true)
         assert !@b_by_sa.share?(:attr => false, :comm => true,  :deriv => true,  :sa => false)
         assert !@b_by_sa.share?(:attr => false, :comm => true,  :deriv => false, :sa => true)
@@ -119,18 +113,10 @@ class MyFirstTest < Test::Unit::TestCase
 
     # 4) Attribution, Non-Commercial
     def test_by_nc_book
-        # TODO this commented out one fails
-        #assert !@b_by_nc.share?(:attr => true,  :comm => true,  :deriv => true,  :sa => true)
-
-        # TODO this commented out one fails
-        #assert !@b_by_nc.share?(:attr => true,  :comm => true,  :deriv => true,  :sa => false)
-
-        # TODO this commented out one fails
-        #assert !@b_by_nc.share?(:attr => true,  :comm => true,  :deriv => false, :sa => true)
-
-        # TODO this commented out one fails
-        #assert !@b_by_nc.share?(:attr => true,  :comm => true,  :deriv => false, :sa => false)
-
+        assert !@b_by_nc.share?(:attr => true,  :comm => true,  :deriv => true,  :sa => true)
+        assert !@b_by_nc.share?(:attr => true,  :comm => true,  :deriv => true,  :sa => false)
+        assert !@b_by_nc.share?(:attr => true,  :comm => true,  :deriv => false, :sa => true)
+        assert !@b_by_nc.share?(:attr => true,  :comm => true,  :deriv => false, :sa => false)
         assert  @b_by_nc.share?(:attr => true,  :comm => false, :deriv => true,  :sa => true)
         assert  @b_by_nc.share?(:attr => true,  :comm => false, :deriv => true,  :sa => false)
         assert  @b_by_nc.share?(:attr => true,  :comm => false, :deriv => false, :sa => true)
@@ -147,28 +133,14 @@ class MyFirstTest < Test::Unit::TestCase
 
     # 5) Attribution, Non-Commercial, ShareAlike
     def test_by_nc_sa_book
-        # TODO this commented out one fails
-        #assert !@b_by_nc_sa.share?(:attr => true,  :comm => true,  :deriv => true,  :sa => true)
-
-        # TODO this commented out one fails
-        #assert !@b_by_nc_sa.share?(:attr => true,  :comm => true,  :deriv => true,  :sa => false)
-
-        # TODO this commented out one fails
-        #assert !@b_by_nc_sa.share?(:attr => true,  :comm => true,  :deriv => false, :sa => true)
-
-        # TODO this commented out one fails
-        #assert !@b_by_nc_sa.share?(:attr => true,  :comm => true,  :deriv => false, :sa => false)
-
+        assert !@b_by_nc_sa.share?(:attr => true,  :comm => true,  :deriv => true,  :sa => true)
+        assert !@b_by_nc_sa.share?(:attr => true,  :comm => true,  :deriv => true,  :sa => false)
+        assert !@b_by_nc_sa.share?(:attr => true,  :comm => true,  :deriv => false, :sa => true)
+        assert !@b_by_nc_sa.share?(:attr => true,  :comm => true,  :deriv => false, :sa => false)
         assert  @b_by_nc_sa.share?(:attr => true,  :comm => false, :deriv => true,  :sa => true)
-
-        # TODO this commented out one fails
-        #assert !@b_by_nc_sa.share?(:attr => true,  :comm => false, :deriv => true,  :sa => false)
-
+        assert !@b_by_nc_sa.share?(:attr => true,  :comm => false, :deriv => true,  :sa => false)
         assert  @b_by_nc_sa.share?(:attr => true,  :comm => false, :deriv => false, :sa => true)
-
-        # TODO this commented out one fails
-        #assert !@b_by_nc_sa.share?(:attr => true,  :comm => false, :deriv => false, :sa => false)
-
+        assert !@b_by_nc_sa.share?(:attr => true,  :comm => false, :deriv => false, :sa => false)
         assert !@b_by_nc_sa.share?(:attr => false, :comm => true,  :deriv => true,  :sa => true)
         assert !@b_by_nc_sa.share?(:attr => false, :comm => true,  :deriv => true,  :sa => false)
         assert !@b_by_nc_sa.share?(:attr => false, :comm => true,  :deriv => false, :sa => true)
@@ -183,13 +155,8 @@ class MyFirstTest < Test::Unit::TestCase
     def test_by_nc_nd_book
         assert !@b_by_nc_nd.share?(:attr => true,  :comm => true,  :deriv => true,  :sa => true)
         assert !@b_by_nc_nd.share?(:attr => true,  :comm => true,  :deriv => true,  :sa => false)
-
-        # TODO this commented out one fails
-        #assert !@b_by_nc_nd.share?(:attr => true,  :comm => true,  :deriv => false, :sa => true)
-
-        # TODO this commented out one fails
-        #assert !@b_by_nc_nd.share?(:attr => true,  :comm => true,  :deriv => false, :sa => false)
-
+        assert !@b_by_nc_nd.share?(:attr => true,  :comm => true,  :deriv => false, :sa => true)
+        assert !@b_by_nc_nd.share?(:attr => true,  :comm => true,  :deriv => false, :sa => false)
         assert !@b_by_nc_nd.share?(:attr => true,  :comm => false, :deriv => true,  :sa => true)
         assert !@b_by_nc_nd.share?(:attr => true,  :comm => false, :deriv => true,  :sa => false)
         assert  @b_by_nc_nd.share?(:attr => true,  :comm => false, :deriv => false, :sa => true)
